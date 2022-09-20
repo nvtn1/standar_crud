@@ -7,17 +7,7 @@
     </h2>
     <div class="pt-5 flex justify-center">
       <table class="ml-4 border-2 border-black w-[720px]">
-        <div class="flex flex-row font-medium border-b-2 border-black">
-          <h3 class="w-[66px] border-r-2 border-black pr-1 flex justify-center">
-            Number
-          </h3>
-          <h3
-            class="ml-2 border-r-2 border-black w-[480px] flex justify-center"
-          >
-            Book Title
-          </h3>
-          <h3 class="ml-2 w-[150px] flex justify-center">Function</h3>
-        </div>
+        <TableTitle />
         <div
           v-for="(judul, index) in julud"
           :key="'urutan-judul' + judul.id"
@@ -50,7 +40,7 @@
     </div>
     <div class="pt-6 flex justify-center">
       <button
-        class="py-1 px-2 border border-black rounded-lg flex justify-center items-center opacity-80 hover:opacity-100 hover:border-white hover:bg-slate-500 hover:text-white transition duration-300 ease-in-out"
+        class="py-1 px-2 font-medium border border-black rounded-lg flex justify-center items-center opacity-80 hover:opacity-90 hover:border-white hover:bg-slate-500 hover:text-white transition duration-300 ease-in-out"
         @click="popupon = true"
       >
         Add New Title
@@ -131,7 +121,6 @@ export default {
           'https://jsonplaceholder.typicode.com/posts/'
         )
         this.julud = res.data.slice(0, 5)
-        alert('Welcome!')
       } catch (err) {
         this.error = 'Error'
       }
@@ -159,6 +148,7 @@ export default {
       this.updateSubmit = true
       this.form.id = id
       this.form.title = title
+      this.popupon = true
     },
     async update(form) {
       try {
