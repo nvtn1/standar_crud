@@ -1,10 +1,6 @@
 <template>
   <div class="h-[800px]">
-    <h2
-      class="h-[60px] text-3xl text-slate-900 mb-4 flex items-center justify-center bg-sky-500"
-    >
-      Book List
-    </h2>
+    <HeaderTitle />
     <div class="pt-5 flex justify-center">
       <table class="ml-4 border-2 border-black w-[720px]">
         <TableTitle />
@@ -14,8 +10,12 @@
           class="font-medium"
         >
           <div class="flex">
-            <p class="pl-7 w-[66px] border-r-2 border-black">{{ index + 1 }}</p>
-            <p class="pl-2 w-[486px]">{{ judul.title }}</p>
+            <p class="pl-7 w-[66px] font-mono border-r-2 border-black">
+              {{ index + 1 }}
+            </p>
+            <p class="pl-2 w-[486px] font-mono text-slate-800">
+              {{ judul.title }}
+            </p>
             <div class="border-l-2 border-black pt-1 pb-1">
               <button
                 type="edit"
@@ -40,7 +40,7 @@
     </div>
     <div class="pt-6 flex justify-center">
       <button
-        class="py-1 px-2 font-medium border border-black rounded-lg flex justify-center items-center opacity-80 hover:opacity-90 hover:border-white hover:bg-slate-500 hover:text-white transition duration-300 ease-in-out"
+        class="py-1 px-2 font-mono font-medium border border-slate-400 rounded-lg flex justify-center items-center opacity-80 hover:opacity-90 hover:border-white hover:bg-slate-300 transition duration-300 ease-in-out"
         @click="popupon = true"
       >
         Add New Title
