@@ -1,7 +1,7 @@
 <template>
   <div class="h-[800px]">
     <HeaderTitle />
-    <div class="pt-5 mt-5 flex justify-center">
+    <div class="pt-5 flex justify-center">
       <table class="ml-4 border-2 border-black w-[720px]">
         <TableTitle />
         <div
@@ -40,7 +40,7 @@
     </div>
     <div class="pt-6 flex justify-center">
       <button
-        class="py-1 px-2 font-mono font-medium shadow-xl border border-white rounded-lg flex justify-center items-center opacity-80 hover:opacity-90 hover:border-white hover:bg-slate-300 transition duration-300 ease-in-out"
+        class="py-1 px-2 font-mono font-medium border border-slate-400 rounded-lg flex justify-center items-center opacity-80 hover:opacity-90 hover:border-white hover:bg-slate-300 transition duration-300 ease-in-out"
         @click="popupon = true"
       >
         Add New Title
@@ -97,7 +97,7 @@
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'BooksPage',
   data() {
     return {
       form: {

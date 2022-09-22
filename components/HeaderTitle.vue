@@ -1,16 +1,16 @@
 <template>
   <header>
-    <nav id="app" class="bg-white shadow">
+    <nav class="bg-white shadow">
       <div class="container px-6 py-3 mx-auto">
         <div class="md:flex justify-between items-center">
           <!-- left section -->
           <div class="flex justify-between items-center">
             <a
               href="#"
-              class="text-gray-800 text-xl font-medium hover:text-gray-700 md:text-2xl"
-              >Book List</a
+              class="text-gray-800 text-xl text-slate-500 font-medium hover:text-gray-700 md:text-2xl"
+              >Book<span class="text-sky-500">shelf</span></a
             >
-            <div class="md:hidden">
+            <div class="flex absolute right-8">
               <button
                 type="button"
                 class="text-gray-500 hover:text-gray-600 focus:text-gray-600 focus:outline-none"
@@ -25,18 +25,17 @@
             </div>
           </div>
           <!-- right section -->
-          <div
-            class="flex-col mt-3 md:flex-row md:mt-0 md:flex"
-            :class="isOpen ? 'flex' : 'hidden'"
-          >
+          <div class="flex relative mt-1" :class="isOpen ? 'flex' : 'hidden'">
             <a href="#" class="text-gray-800 text-sm hover:font-medium md:mx-4"
               >Home</a
             >
-            <a href="#" class="text-gray-800 text-sm hover:font-medium md:mx-4"
-              >Contact</a
+            <a
+              href="books"
+              class="text-gray-800 text-sm hover:font-medium md:mx-4"
+              >Table Books</a
             >
             <a href="#" class="text-gray-800 text-sm hover:font-medium md:mx-4"
-              >About Us</a
+              >Login</a
             >
           </div>
         </div>
